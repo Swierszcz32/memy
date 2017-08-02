@@ -33,7 +33,7 @@ public class GifDao {
     public Images findName(String name) {
         Images search = null;
         for(Images image: images) {
-            if (image.getName().equals(name)){
+            if (image.getName().equalsIgnoreCase(name)){
                 search = image;
             }
         }
