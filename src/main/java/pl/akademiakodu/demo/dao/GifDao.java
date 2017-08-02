@@ -18,7 +18,6 @@ public class GifDao {
         images.add(new Images(false, "book-dominos"));
         images.add(new Images(true, "compiler-bot"));
         images.add(new Images(false, "cowboy-coder"));
-        images.add(new Images(false, "infinite-andrew"));
     }
     public List<Images> showAll(){return images;}
 
