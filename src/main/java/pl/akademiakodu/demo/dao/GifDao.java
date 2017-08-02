@@ -30,5 +30,15 @@ public class GifDao {
         }
         return favorites;
     }
+    public Images findName(String name) {
+        Images search = null;
+        for(Images image: images) {
+            if (image.getName().equals(name)){
+                search = image;
+            }
+        }
+        return search;
+
+    }
 }
 

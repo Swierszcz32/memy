@@ -4,7 +4,9 @@ package pl.akademiakodu.demo.model;
  * Created by Agnieszka on 2017-08-02.
  */
 public class Images {
-   private boolean isFavorite = false;
+
+
+    private boolean isFavorite = false;
     private String name;
 
     public boolean isFavorite() {
