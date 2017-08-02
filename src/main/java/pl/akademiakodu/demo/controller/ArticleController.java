@@ -1,11 +1,9 @@
-package controller;
+package pl.akademiakodu.demo.controller;
 
-import dao.ArticleDao;
-import model.Article;
+import pl.akademiakodu.demo.dao.ArticleDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
  * Created by Agnieszka on 2017-08-02.

@@ -1,6 +1,6 @@
-package dao;
+package pl.akademiakodu.demo.dao;
 
-import model.Article;
+import pl.akademiakodu.demo.model.Article;
 
 import java.util.ArrayList;
 import java.util.List;
