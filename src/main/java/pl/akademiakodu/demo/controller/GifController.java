@@ -11,9 +11,19 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class GifController {
 
+    private GifDao gifDao = new GifDao();
+
+
     @GetMapping("/")
-    public String showGifs(ModelMap modelMap){
-        modelMap.addAttribute("images", GifDao.show());
+    public String showGifs(ModelMap modelMap) {
+        modelMap.addAttribute("images", gifDao.showAll());
         return "home";
+    }
+
+    @GetMapping("/favorites")
+    public String favorites(ModelMap modelMap) {
+        modelMap.addAttribute("images", gifDao.showFavorites());
+
+        return "favorites";
     }
 }

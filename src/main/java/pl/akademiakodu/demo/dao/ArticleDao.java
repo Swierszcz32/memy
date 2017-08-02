@@ -1,4 +1,4 @@
-package pl.akademiakodu.demo.Dao;
+package pl.akademiakodu.demo.dao;
 
 import pl.akademiakodu.demo.model.Article;
 
@@ -6,17 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by user on 02.08.2017.
+ * Created by Agnieszka on 2017-08-02.
  */
 public class ArticleDao {
-    public static List<Article> table(){
-        List<Article> table = new ArrayList<>();
-        table.add(new Article("","",""));
-        table.add(new Article("","",""));
-        table.add(new Article("","",""));
-        table.add(new Article("","",""));
-        table.add(new Article("","",""));
-        return table();
 
+    public static List<Article> show() {
+        List<Article> articles = new ArrayList<>();
+        articles.add(new Article("Dupa", "jkvcsdjkg"));
+        articles.add(new Article("asfsdgddf", "fcvegvfdf"));
+        articles.add(new Article("Artykuł 3", "blabla"));
+        articles.add(new Article("Artykuł 4", "blabla"));
+        articles.add(new Article("Artykuł 5", "blabla"));
+        return articles;
     }
+
 }
