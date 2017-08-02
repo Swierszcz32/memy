@@ -9,12 +9,14 @@ import java.util.List;
  * Created by user on 02.08.2017.
  */
 public class ArticleDao {
-    public static List<Article> table = new ArrayList<>();
-    static {
+    public static List<Article> table(){
+        List<Article> table = new ArrayList<>();
         table.add(new Article("","",""));
         table.add(new Article("","",""));
         table.add(new Article("","",""));
         table.add(new Article("","",""));
         table.add(new Article("","",""));
+        return table();
+
     }
 }
