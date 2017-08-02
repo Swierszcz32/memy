@@ -4,6 +4,7 @@ import pl.akademiakodu.demo.dao.GifDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import pl.akademiakodu.demo.model.Images;
 
 /**
  * Created by Agnieszka on 2017-08-02.

@@ -24,11 +24,12 @@ public class GifDao {
 
     public List<Images> showFavorites() {
         List<Images> favorites = new ArrayList<>();
-        for (int i=0; i<=images.size(); i++){
+        for (int i=0; i<images.size(); i++){
         if (images.get(i).isFavorite()== true)
             favorites.add(images.get(i));
         }
         return favorites;
     }
-}
+
+    }
 
