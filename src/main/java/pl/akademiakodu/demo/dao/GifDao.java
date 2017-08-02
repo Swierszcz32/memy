@@ -1,5 +1,6 @@
 package pl.akademiakodu.demo.dao;
 
+import org.springframework.stereotype.Controller;
 import pl.akademiakodu.demo.model.Images;
 
 import java.util.ArrayList;
@@ -10,15 +11,24 @@ import java.util.List;
  */
 public class GifDao {
 
-    public static List<Images> show(){
-        List<Images> images = new ArrayList<>();
+    static List<Images> images = new ArrayList<>();
+    static {
         images.add(new Images(true, "android-explosion"));
         images.add(new Images(false, "ben-and-mike"));
         images.add(new Images(false, "book-dominos"));
         images.add(new Images(true, "compiler-bot"));
         images.add(new Images(false, "cowboy-coder"));
         images.add(new Images(false, "infinite-andrew"));
-        return images;
     }
+    public List<Images> showAll(){return images;}
 
+    public List<Images> showFavorites() {
+        List<Images> favorites = new ArrayList<>();
+        for (int i=0; i<=images.size(); i++){
+        if (images.get(i).isFavorite()== true)
+            favorites.add(images.get(i));
+        }
+        return favorites;
+    }
 }
+
