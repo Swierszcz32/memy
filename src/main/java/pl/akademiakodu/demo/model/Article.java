@@ -1,12 +1,20 @@
 package pl.akademiakodu.demo.model;
 
 /**
- * Created by user on 02.08.2017.
+ * Created by Agnieszka on 2017-08-02.
  */
 public class Article {
     private String title;
     private String body;
-    private String value;
+
+    public Article(String title, String body) {
+        this.title = title;
+        this.body = body;
+    }
+
+    public Article() {
+    }
+
 
     public String getTitle() {
         return title;
@@ -24,21 +32,9 @@ public class Article {
         this.body = body;
     }
 
-    public String getValue() {
-        return value;
-    }
 
-    public void setValue(String value) {
-        this.value = value;
+    public String toString(){
+        return title+" "+body;
     }
-
-    public Article(){}
-
-    public Article(String title, String body, String value) {
-        this.title = title;
-        this.body = body;
-        this.value = value;
-    }
-    @Override
-    public String toString(){return title+" "+body+" "+value;}
 }
+
