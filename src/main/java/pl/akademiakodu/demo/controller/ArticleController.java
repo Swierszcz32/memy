@@ -1,19 +1,15 @@
-package pl.akademiakodu.demo.controller;
+package pl.akademiakodu.demo.Controller;
 
-import pl.akademiakodu.demo.dao.ArticleDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import pl.akademiakodu.demo.Dao.ArticleDao;
 
-/**
- * Created by Agnieszka on 2017-08-02.
- */
 @Controller
 public class ArticleController {
-
     @GetMapping("/articles")
-    public String show( ModelMap modelMap){
-        modelMap.addAttribute("articles", ArticleDao.show());
+        public String artilces(ModelMap modelMap){
+        modelMap.addAttribute("articles", ArticleDao.table());
         return "articles";
     }
-}
+    }
