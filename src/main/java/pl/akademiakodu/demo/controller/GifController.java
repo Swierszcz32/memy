@@ -43,7 +43,6 @@ public class GifController {
 
     @GetMapping("/gif/{name}")
     public String display(@PathVariable String name, ModelMap modelMap) {
-        List<Images> images = new ArrayList<Images>();
         modelMap.addAttribute("gif", gifDao.findName(name));
         return "gif-details";
     }

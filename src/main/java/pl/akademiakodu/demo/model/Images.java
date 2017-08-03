@@ -6,14 +6,10 @@ import sun.util.resources.cldr.tg.CalendarData_tg_Cyrl_TJ;
  * Created by Agnieszka on 2017-08-02.
  */
 public class Images {
-    public Long id;
 
     private boolean isFavorite = false;
     private String name;
 
-    public Long getId() {return id;}
-
-    public void setId(Long id) {this.id = id;}
 
     public boolean isFavorite() {
         return isFavorite;
@@ -31,16 +27,18 @@ public class Images {
         this.name = name;
     }
 
+    private String username;
 
+    public String getUsername() {return username;}
 
-    public Images() {
-    }
+    public void setUsername(String username) {this.username = username;}
 
+    public Images() {}
 
-    public Images(boolean isFavorite, String name, Long id) {
+    public Images(boolean isFavorite, String name, Long id,String username) {
         this.isFavorite = isFavorite;
         this.name = name;
-        this.id = id;
+        this.username = username;
     }
 
 }
