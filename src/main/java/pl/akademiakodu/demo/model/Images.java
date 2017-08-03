@@ -9,6 +9,7 @@ public class Images {
 
     private boolean isFavorite = false;
     private String name;
+    private Category cat;
 
 
     public boolean isFavorite() {
@@ -27,19 +28,32 @@ public class Images {
         this.name = name;
     }
 
+
+    public Category getCat() {
+        return cat;
+    }
+
+    public void setCat(Category cat) {
+        this.cat = cat;
+    }
+
     private String username;
+
 
     public String getUsername() {return username;}
 
+
     public void setUsername(String username) {this.username = username;}
 
-    public Images() {}
 
-    public Images(boolean isFavorite, String name, Long id,String username) {
+    public Images(boolean isFavorite, String name, Category cat,String username) {
         this.isFavorite = isFavorite;
         this.name = name;
+        this.cat = cat;
         this.username = username;
-    }
+}
+    public Images() {}
+
 
 }
 
