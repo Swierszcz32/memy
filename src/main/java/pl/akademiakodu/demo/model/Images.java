@@ -42,10 +42,11 @@ public class Images {
 
     public String getUsername() {return username;}
 
+
     public void setUsername(String username) {this.username = username;}
 
 
-    public Images(boolean isFavorite, String name, Category cat, Long id,String username) {
+    public Images(boolean isFavorite, String name, Category cat,String username) {
         this.isFavorite = isFavorite;
         this.name = name;
         this.cat = cat;
