@@ -30,11 +30,20 @@ public class GifController {
         modelMap.addAttribute("images", gifDao.showFavorites());
         return "favorites";
     }
+
     @GetMapping("/gifs/search")
-    public String search(@RequestParam String q, ModelMap modelMap){
+    public String search(@RequestParam String q, ModelMap modelMap) {
         List<Images> images = new ArrayList<Images>();
         images.add(gifDao.findName(q));
-        modelMap.addAttribute("images",images);
+        modelMap.addAttribute("images", images);
+        return "home";
+    }
+
+    @GetMapping("/home/{id}")
+    public String display(@PathVariable Long id, ModelMap modelMap) {
+        List<Images> images = new ArrayList<Images>();
+        images.add(gifDao.findId(id));
+        modelMap.addAttribute("images", gifDao.findId(id));
         return "home";
     }
 }

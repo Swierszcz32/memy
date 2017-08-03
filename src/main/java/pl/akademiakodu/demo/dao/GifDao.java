@@ -12,33 +12,49 @@ import java.util.List;
 public class GifDao {
 
     static List<Images> images = new ArrayList<>();
+
     static {
-        images.add(new Images(true, "android-explosion"));
-        images.add(new Images(false, "ben-and-mike"));
-        images.add(new Images(false, "book-dominos"));
-        images.add(new Images(true, "compiler-bot"));
-        images.add(new Images(false, "cowboy-coder"));
-        images.add(new Images(true, "tenorme"));
+        images.add(new Images(true, "android-explosion", 1L));
+        images.add(new Images(false, "ben-and-mike", 2L));
+        images.add(new Images(false, "book-dominos", 3L));
+        images.add(new Images(true, "compiler-bot", 4L));
+        images.add(new Images(false, "cowboy-coder", 5L));
+        images.add(new Images(true, "tenorme", 6L));
     }
-    public List<Images> showAll(){return images;}
+
+    public List<Images> showAll() {
+        return images;
+    }
 
     public List<Images> showFavorites() {
         List<Images> favorites = new ArrayList<>();
-        for (int i=0; i<images.size(); i++){
-        if (images.get(i).isFavorite()== true)
-            favorites.add(images.get(i));
+        for (int i = 0; i < images.size(); i++) {
+            if (images.get(i).isFavorite() == true)
+                favorites.add(images.get(i));
         }
         return favorites;
     }
+
     public Images findName(String name) {
         Images search = null;
-        for(Images image: images) {
-            if (image.getName().equalsIgnoreCase(name)){
+        for (Images image : images) {
+            if (image.getName().equalsIgnoreCase(name)) {
                 search = image;
             }
         }
         return search;
 
+    }
+
+    public Images findId(Long id) {
+        Images display = null;
+        for (Images image : images) {
+            if (image.getId().longValue() == id.longValue()) {
+                display = image;
+            }
+
+        }
+        return display;
     }
 }
 
