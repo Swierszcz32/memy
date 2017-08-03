@@ -7,10 +7,10 @@ import sun.util.resources.cldr.tg.CalendarData_tg_Cyrl_TJ;
  */
 public class Images {
 
-
     private boolean isFavorite = false;
     private String name;
     private Category cat;
+
 
     public boolean isFavorite() {
         return isFavorite;
@@ -35,6 +35,7 @@ public class Images {
     public void setCat(Category cat) {
         this.cat = cat;
     }
+
 
     public Images() {
     }

@@ -13,11 +13,12 @@ import java.util.List;
 public class GifDao {
     public static List<Category> categories = new ArrayList<>();
 
-    public List<Category> showCate(){
+    public List<Category> showCate() {
         return categories;
     }
 
     static List<Images> images = new ArrayList<>();
+
     static {
         Category people = new Category("Ludzie", 1);
         Category animals = new Category("Zwierzęta", 2);
@@ -32,42 +33,49 @@ public class GifDao {
         images.add(new Images(false, "cowboy-coder", people));
         images.add(new Images(true, "tenorme", people));
     }
-    public List<Images> showAll(){return images;}
+
+    public List<Images> showAll() {
+        return images;
+    }
 
     public List<Images> showFavorites() {
         List<Images> favorites = new ArrayList<>();
-        for (int i=0; i<images.size(); i++){
-        if (images.get(i).isFavorite()== true)
-            favorites.add(images.get(i));
+        for (int i = 0; i < images.size(); i++) {
+            if (images.get(i).isFavorite() == true)
+                favorites.add(images.get(i));
         }
         return favorites;
     }
+
     public Images findName(String name) {
         Images search = null;
-        for(Images image: images) {
-            if (image.getName().equals(name)){
+        for (Images image : images) {
+            if (image.getName().equalsIgnoreCase(name)) {
                 search = image;
             }
         }
         return search;
 
     }
-    public List<Images> findbyCate(long id){
+
+    public List<Images> findbyCate(long id) {
         List<Images> cate = new ArrayList<>();
-        for(Images image: images){
-            if(image.getCat().getId() == (id)){
+        for (Images image : images) {
+            if (image.getCat().getId() == (id)) {
                 cate.add(image);
             }
         }
         return cate;
     }
-    public List<Images> searchByCateName(String cateName){
+
+    public List<Images> searchByCateName(String cateName) {
         List<Images> byCate = new ArrayList<>();
-        for(Images image: images){
-            if(image.getCat().getName().equalsIgnoreCase(cateName)){
+        for (Images image : images) {
+            if (image.getCat().getName().equalsIgnoreCase(cateName)) {
                 byCate.add(image);
             }
         }
         return byCate;
+
     }
 }

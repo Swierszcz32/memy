@@ -1,5 +1,4 @@
 package pl.akademiakodu.demo.controller;
-import org.springframework.ui.Model;
 import pl.akademiakodu.demo.dao.GifDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -30,6 +29,7 @@ public class GifController {
         modelMap.addAttribute("images", gifDao.showFavorites());
         return "favorites";
     }
+
     @GetMapping("/gifs/search")
     public String search(@RequestParam String q, ModelMap modelMap) {
         List<Images> images = new ArrayList<Images>();
@@ -37,6 +37,13 @@ public class GifController {
         images.add(gifDao.findName(q));
         modelMap.addAttribute("images", images);
         return "home";
+    }
+
+    @GetMapping("/gif/{name}")
+    public String display(@PathVariable String name, ModelMap modelMap) {
+        List<Images> images = new ArrayList<Images>();
+        modelMap.addAttribute("gif", gifDao.findName(name));
+        return "gif-details";
     }
 
     @GetMapping("/categories")
@@ -56,5 +63,4 @@ public class GifController {
         modelMap.addAttribute("images", gifDao.searchByCateName(q));
         return "categories";
     }
-
 }
