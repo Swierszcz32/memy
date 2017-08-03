@@ -45,19 +45,14 @@ public class Images {
     public void setUsername(String username) {this.username = username;}
 
 
-    public Images(boolean isFavorite, String name, Category cat) {
+    public Images(boolean isFavorite, String name, Category cat, Long id,String username) {
         this.isFavorite = isFavorite;
         this.name = name;
         this.cat = cat;
+        this.username = username;
 }
     public Images() {}
 
-    public Images(boolean isFavorite, String name, Long id,String username) {
-        this.isFavorite = isFavorite;
-        this.name = name;
-        this.username = username;
-
-    }
 
 }
 

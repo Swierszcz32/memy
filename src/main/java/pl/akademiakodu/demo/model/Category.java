@@ -9,15 +9,7 @@ import java.util.List;
 public class Category {
     private String name;
     private long id;
-    private List<Images> images = new ArrayList<>();
 
-    public List<Images> getImages() {
-        return images;
-    }
-
-    public void setImages(List<Images> images) {
-        this.images = images;
-    }
 
     public String getName() {
         return name;

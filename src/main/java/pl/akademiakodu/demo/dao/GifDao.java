@@ -27,19 +27,12 @@ public class GifDao {
         categories.add(people);
         categories.add(animals);
         categories.add(things);
-        images.add(new Images(true, "android-explosion", things));
-        images.add(new Images(false, "ben-and-mike", people));
-        images.add(new Images(false, "book-dominos", things));
-        images.add(new Images(true, "compiler-bot", animals));
-        images.add(new Images(false, "cowboy-coder", people));
-        images.add(new Images(true, "tenorme", people));
-
-        images.add(new Images(true, "android-explosion", 1L,"android"));
-        images.add(new Images(false, "ben-and-mike", 2L,"mike"));
-        images.add(new Images(false, "book-dominos", 3L,"damian"));
-        images.add(new Images(true, "compiler-bot", 4L,"bot"));
-        images.add(new Images(false, "cowboy-coder", 5L,"cowboy"));
-        images.add(new Images(true, "tenorme", 6L,"adrian"));
+        images.add(new Images(true, "android-explosion", things, 1L, "android"));
+        images.add(new Images(false, "ben-and-mike", people, 2L, "mike"));
+        images.add(new Images(false, "book-dominos", things, 3L,"damian"));
+        images.add(new Images(true, "compiler-bot", animals, 4L, "bot"));
+        images.add(new Images(false, "cowboy-coder", people, 5L, "cowboy"));
+        images.add(new Images(true, "tenorme", people, 6L, "adrian"));
     }
 
     public List<Images> showAll() {
