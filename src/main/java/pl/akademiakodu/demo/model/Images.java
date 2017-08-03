@@ -28,6 +28,7 @@ public class Images {
         this.name = name;
     }
 
+
     public Category getCat() {
         return cat;
     }
@@ -36,14 +37,25 @@ public class Images {
         this.cat = cat;
     }
 
+    private String username;
 
-    public Images() {
-    }
+
+    public String getUsername() {return username;}
+
+    public void setUsername(String username) {this.username = username;}
+
 
     public Images(boolean isFavorite, String name, Category cat) {
         this.isFavorite = isFavorite;
         this.name = name;
         this.cat = cat;
+}
+    public Images() {}
+
+    public Images(boolean isFavorite, String name, Long id,String username) {
+        this.isFavorite = isFavorite;
+        this.name = name;
+        this.username = username;
 
     }
 
