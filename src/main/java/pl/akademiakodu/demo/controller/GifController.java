@@ -41,12 +41,11 @@ public class GifController {
         return "home";
     }
 
-    @GetMapping("/home/{id}")
-    public String display(@PathVariable Long id, ModelMap modelMap) {
+    @GetMapping("/gif/{name}")
+    public String display(@PathVariable String name, ModelMap modelMap) {
         List<Images> images = new ArrayList<Images>();
-        images.add(gifDao.findId(id));
-        modelMap.addAttribute("images", gifDao.findId(id));
-        return "home";
+        modelMap.addAttribute("gif", gifDao.findName(name));
+        return "gif-details";
     }
 
     @GetMapping("/categories")
