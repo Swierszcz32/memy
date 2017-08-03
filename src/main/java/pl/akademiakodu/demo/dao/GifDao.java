@@ -1,6 +1,7 @@
 package pl.akademiakodu.demo.dao;
 
 import org.springframework.stereotype.Controller;
+import pl.akademiakodu.demo.model.Category;
 import pl.akademiakodu.demo.model.Images;
 
 import java.util.ArrayList;
@@ -57,4 +58,3 @@ public class GifDao {
         return display;
     }
 }
-
