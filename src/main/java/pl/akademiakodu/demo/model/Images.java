@@ -10,6 +10,7 @@ public class Images {
 
     private boolean isFavorite = false;
     private String name;
+    private Category cat;
 
     public boolean isFavorite() {
         return isFavorite;
@@ -27,13 +28,21 @@ public class Images {
         this.name = name;
     }
 
+    public Category getCat() {
+        return cat;
+    }
+
+    public void setCat(Category cat) {
+        this.cat = cat;
+    }
 
     public Images() {
     }
 
-    public Images(boolean isFavorite, String name) {
+    public Images(boolean isFavorite, String name, Category cat) {
         this.isFavorite = isFavorite;
         this.name = name;
+        this.cat = cat;
 
     }
 
