@@ -1,6 +1,7 @@
 package pl.akademiakodu.demo.dao;
 
 import org.springframework.stereotype.Controller;
+import pl.akademiakodu.demo.model.Category;
 import pl.akademiakodu.demo.model.Images;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class GifDao {
         images.add(new Images(false, "book-dominos"));
         images.add(new Images(true, "compiler-bot"));
         images.add(new Images(false, "cowboy-coder"));
-        images.add(new Images(false, "infinite-andrew"));
+        images.add(new Images(true, "tenorme"));
     }
     public List<Images> showAll(){return images;}
 
@@ -30,6 +31,14 @@ public class GifDao {
         }
         return favorites;
     }
+    public Images findName(String name) {
+        Images search = null;
+        for(Images image: images) {
+            if (image.getName().equals(name)){
+                search = image;
+            }
+        }
+        return search;
 
     }
-
+}
